@@ -1,95 +1,89 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 20px 10%;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 100;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 25px;
 }
 
-nav ul li a {
+nav a {
   text-decoration: none;
-  color: white;
-  font-weight: 600;
+  color: #222;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #c6a400;
 }
 
 .logo {
-  width: 150px;
-  height: auto;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.hero, .subpage {
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+header {
+  padding: 100px 10%;
   text-align: center;
-  color: white;
-  position: relative;
 }
 
-.hero::before, .subpage::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+header h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
 }
 
-.hero-text, .subpage-text {
-  position: relative;
-  z-index: 1;
+header p {
+  color: #666;
+  font-size: 18px;
 }
 
-.hero-text h1, .subpage-text h1 {
-  font-size: 3rem;
-  color: gold;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-}
-
-main {
-  padding: 2rem;
+section {
+  padding: 60px 10%;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 30px;
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
+  border: 1px solid #eee;
+  padding: 20px;
+  transition: 0.3s;
 }
 
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #c6a400;
 }
 
 footer {
-  background: navy;
-  color: gold;
   text-align: center;
-  padding: 1rem;
+  padding: 30px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 14px;
 }
