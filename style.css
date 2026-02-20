@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.hero, .subpage {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before, .subpage::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-text, .subpage-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1, .subpage-text h1 {
+  font-size: 3rem;
+  color: gold;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background: navy;
+  color: gold;
+  text-align: center;
+  padding: 1rem;
+}
